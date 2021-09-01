@@ -1,0 +1,123 @@
+; A rough hledger model of Haskell Foundation finances as described at
+; https://discourse.haskell.org/t/live-update-list-of-haskell-foundation-funding/2964
+
+; Emily and I started full time on Feb 22nd, 2021. At that point the
+; wonderful people who got the Foundation up and running had raised
+; $327,0000 [typo]. That fundraising success gave the Interim Board
+; confidence that bringing on two people full time was financially
+; reasonable.
+
+; Here’s the breakdown of the contributions:
+; IOHK - $125,000
+; GitHub - $70,000 *Note: This contribution is earmarked for GHC developer support
+; Well Typed - $25,000
+; Mercury - $12,000
+; Flipstone - $20,000
+; Tweag - $25,000
+; Obsidian - $25,000
+; EMQ - $25,000
+
+commodity $1,000.
+
+2021-01-01 Initial fundraising, approximate date
+    revenues:sponsors:IOHK                     $-125,000
+    revenues:sponsors:Well Typed                $-25,000
+    revenues:sponsors:Mercury                   $-12,000
+    revenues:sponsors:Flipstone                 $-20,000
+    revenues:sponsors:Tweag                     $-25,000
+    revenues:sponsors:Obsidian                  $-25,000
+    revenues:sponsors:EMQ                       $-25,000
+    assets:general                              $257,000
+    revenues:sponsors:GitHub                    $-70,000
+    assets:GHC                                   $70,000
+
+2021-02-22 Andrew and Emily start, total assets are $327k
+    assets                                        $0 ==* $327,000
+
+; Since we started, we’ve received the following donations:
+; Digtal Asset - $70,000
+; Exfreight - $25,000
+; TripShot - $10,000
+; HERP - $10,000
+; We have more in the pipeline at various stages, but we do not count on checks that haven’t cleared.
+
+2021-06-01 Subsequent corporate donations, approximate date
+    revenues:sponsors:Digital Asset             $-70,000
+    revenues:sponsors:Exfreight                 $-25,000
+    revenues:sponsors:TripShot                  $-10,000
+    revenues:sponsors:HERP                      $-10,000
+    assets:general                              $115,000
+
+; We have 13 individual contributors, of which 11 are recurring monthly!
+; Most are in the $5 - $10 / month range, we have one at $20, another at $50 (!!), and cdsmith’s amazing contributions which, annualized, gets him to the Applicative sponsorship level!
+; Of the one time donations, one was for $20, and the other for $1,000 - absolutely wonderful.
+
+2021-06-01 Individual donations, unknown dates/amounts
+    revenues:sponsors:individuals                $-0
+    assets:general                                $0
+
+; By far our greatest cost is payroll for Emily and I, which will be
+; (with worker’s comp, payroll taxes, benefits, and everything) just
+; under $300,000 for this year.
+
+2021-06-01 Salaries etc. for 2021, approximate date
+    expenses:salaries                           $300,000
+    assets:general                             $-300,000
+
+; We also have the GHC support that GitHub earmarked its contribution
+; for, of which we’ve used only a little more than $12,000 of so far.
+
+2021-06-01 GHC support, approximate date
+    expenses:projects:GHC                        $12,000
+    assets:GHC                                  $-12,000
+
+; We’ve contributed $1,000 to HLS’s Summer of Code project, and spent
+; around $1,000 on various expenses involved with being in business.
+
+2021-06-01 HLS support, approximate date
+    expenses:projects:HLS                         $1,000
+    assets:general                               $-1,000
+
+2021-06-01 miscellaneous expenses
+    expenses:misc                                 $1,000
+    assets:general                               $-1,000
+
+2021-09-01 current total assets are $128k
+    assets                                        $0 ==* $128,000
+
+; That leaves a bunch left over, and here’s our budget for the rest of
+; the year: $6,000 for support of the Haskell Interlude podcast,
+; $9,000 more for technical agenda work, $10,000 more for community
+; support, $10,000 for marketing (Haskell to companies and
+; individuals, the HF to potential sponsors, an HF merch shop, etc.),
+; and a little over $4,000 for misc. expenses.
+
+2021-10-01 planned expenses, approximate date
+    expenses:projects:Haskell Interlude podcast   $6,000
+    expenses:projects:technical agenda            $9,000
+    expenses:marketing                           $10,000
+    expenses:misc                                 $4,000
+    assets:general                 
+
+; The trick for next year’s budget is estimating how many sponsors
+; will renew their contributions, at what levels, and how successful
+; we will continue to be finding new ones. We definitely want to
+; expand our programs and support dramatically now that we’re well
+; established and in good financial position.
+
+; Our current thinking is a technical agenda budget of $50,000,
+; community $25,000, marketing $20,000, misc. at $15,000, and we would
+; start setting aside reserve funds of approximately $100,000 to
+; ensure that we can weather periods of low funding in the future.
+
+2022-06-01 2022 forecast
+    revenues:sponsors                          $-350,000
+    revenues:sponsors:Github                    $-50,000
+    expenses:projects:technical agenda           $50,000
+    expenses:projects:community                  $25,000
+    expenses:marketing                           $20,000
+    expenses:misc                                $15,000
+    assets:reserve                              $100,000 == $100,000
+    assets:GHC                                   $50,000 == $108,000
+    assets:general                              $140,000 == $181,000
+
