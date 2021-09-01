@@ -8,6 +8,7 @@ README.md: hf.journal Makefile
 	$(SED) '/<!-- REPORTS -->/q' $@ >.$@
 	$(HLEDGER) is -QT -e tomorrow -O html >>.$@
 	$(HLEDGER) bs -QE -e tomorrow -O html >>.$@
+	echo >>.$@
 	$(DELCSS) <.$@ >$@
 	git commit -m "reports" -- $@
 
