@@ -13,7 +13,7 @@ these are unofficial guesstimates and not reality.)
 To update:
 
 1. Update and commit hf.journal
-2. `make` to update the reports and commit the readme
+2. `make README.md` to update reports and commit the readme
 3. Push/merge to publish on github
 
 -->
