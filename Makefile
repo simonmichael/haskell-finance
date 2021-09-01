@@ -2,12 +2,15 @@ HLEDGER=hledger
 SED=gsed
 DELCSS=$(SED) -E -z 's/<style>[^>]+><link href="hledger.css" rel="stylesheet">/\n<br>\n/g'
 
+REPORT1=$(HLEDGER) is -QETS -e tomorrow
+REPORT2=$(HLEDGER) bs -QE -e tomorrow
+
 # update reports in readme
 # html
 README.md: hf.journal Makefile
 	$(SED) '/<!-- REPORTS -->/q' $@ >.$@
-	$(HLEDGER) is -QETS -e tomorrow -O html >>.$@
-	$(HLEDGER) bs -QE -e tomorrow -O html >>.$@
+	$(REPORT1) -O html >>.$@
+	$(REPORT2) -O html >>.$@
 	echo >>.$@
 	$(DELCSS) <.$@ >$@
 	git commit -m "reports" -- $@ || echo "reports have not changed"
@@ -16,8 +19,12 @@ README.md: hf.journal Makefile
 # README.md: hf.journal Makefile
 # 	$(SED) '/<!-- REPORTS -->/q' $@ >.$@
 # 	printf '\n```\n' >>.$@
-# 	$(HLEDGER) is -QT -e tomorrow --pretty >>.$@
+# 	$(REPORT1) --pretty >>.$@
 # 	printf '```\n\n```\n' >>.$@
-# 	$(HLEDGER) bs -QE -e tomorrow --pretty >>.$@
+# 	$(REPORT2) --pretty >>.$@
 # 	printf '```\n\n' >>.$@
 # 	mv .$@ $@
+
+preview:
+	$(REPORT1) --pretty #-%
+	$(REPORT2) --pretty #-%
