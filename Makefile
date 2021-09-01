@@ -5,7 +5,7 @@ DELCSS=$(SED) -E -z 's/<style>[^>]+><link href="hledger.css" rel="stylesheet">/\
 # update reports in readme
 # html
 README.md: hf.journal Makefile
-	sed '/## Reports/q' $@ >.$@
+	$(SED) '/## Reports/q' $@ >.$@
 	$(HLEDGER) is -QT -e tomorrow -O html >>.$@
 	$(HLEDGER) bs -QE -e tomorrow -O html >>.$@
 	$(DELCSS) <.$@ >$@
@@ -13,7 +13,7 @@ README.md: hf.journal Makefile
 
 # plain text
 # README.md: hf.journal Makefile
-# 	sed '/## Reports/q' $@ >.$@
+# 	$(SED) '/## Reports/q' $@ >.$@
 # 	printf '\n```\n' >>.$@
 # 	$(HLEDGER) is -QT -e tomorrow --pretty >>.$@
 # 	printf '```\n\n```\n' >>.$@

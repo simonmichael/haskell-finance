@@ -4,7 +4,7 @@ Notes on Haskell-programming-language-related finances.
 
 hf.journal is a rough model of the Haskell Foundation finances described at
 https://discourse.haskell.org/t/live-update-list-of-haskell-foundation-funding/2964,
-and below are some reports. 
+and below are some reports based on it. 
 (Remember, just my own rough model based on web comments, 
 these are unofficial guesstimates and not reality.)
 
