@@ -6,7 +6,7 @@ DELCSS=$(SED) -E -z 's/<style>[^>]+><link href="hledger.css" rel="stylesheet">/\
 # html
 README.md: hf.journal Makefile
 	$(SED) '/<!-- REPORTS -->/q' $@ >.$@
-	$(HLEDGER) is -QT -e tomorrow -O html >>.$@
+	$(HLEDGER) is -QTS -e tomorrow -O html >>.$@
 	$(HLEDGER) bs -QE -e tomorrow -O html >>.$@
 	echo >>.$@
 	$(DELCSS) <.$@ >$@
