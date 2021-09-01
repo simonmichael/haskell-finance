@@ -94,12 +94,12 @@ commodity $1,000.
 ; individuals, the HF to potential sponsors, an HF merch shop, etc.),
 ; and a little over $4,000 for misc. expenses.
 
-; 2021-10-01 rest of year forecast
-;     expenses:projects:Haskell Interlude podcast   $6,000
-;     expenses:projects:technical agenda            $9,000
-;     expenses:marketing                           $10,000
-;     expenses:misc                                 $4,000
-;     assets:general                 
+2021-10-01 rest of year forecast
+    expenses:projects:Haskell Interlude podcast   $6,000
+    expenses:projects:technical agenda            $9,000
+    expenses:marketing                           $10,000
+    expenses:misc                                 $4,000
+    assets:general
 
 ; The trick for next year’s budget is estimating how many sponsors
 ; will renew their contributions, at what levels, and how successful
