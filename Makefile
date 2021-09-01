@@ -1,7 +1,17 @@
 HLEDGER=hledger
+SED=gsed
+DELCSS=$(SED) -E -z 's/<style>[^>]+><link href="hledger.css" rel="stylesheet">/\n<br>\n/g'
 
 # update reports in readme
+# html
+README.md: hf.journal Makefile
+	sed '/## Reports/q' $@ >.$@
+	$(HLEDGER) is -QT -e tomorrow -O html >>.$@
+	$(HLEDGER) bs -QE -e tomorrow -O html >>.$@
+	$(DELCSS) <.$@ >$@
+	git commit -m "reports" -- $@
 
+# plain text
 # README.md: hf.journal Makefile
 # 	sed '/## Reports/q' $@ >.$@
 # 	printf '\n```\n' >>.$@
@@ -10,13 +20,3 @@ HLEDGER=hledger
 # 	$(HLEDGER) bs -QE -e tomorrow --pretty >>.$@
 # 	printf '```\n\n' >>.$@
 # 	mv .$@ $@
-
-SED=gsed
-DELCSS=$(SED) -E -z 's/<style>[^>]+><link href="hledger.css" rel="stylesheet">/\n<br>\n/g'
-
-README.md: hf.journal Makefile
-	sed '/## Reports/q' $@ >.$@
-	$(HLEDGER) is -QT -e tomorrow -O html >>.$@
-	$(HLEDGER) bs -QE -e tomorrow -O html >>.$@
-	$(DELCSS) <.$@ >$@
-	git commit -m "reports" -- $@
