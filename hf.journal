@@ -53,7 +53,7 @@ commodity $1,000.
 ; Of the one time donations, one was for $20, and the other for $1,000 - absolutely wonderful.
 
 2021-06-01 Individual donations, unknown dates/amounts
-    revenues:sponsors:individuals                $-0
+    revenues:sponsors:individuals?               $-0
     assets:general                                $0
 
 ; By far our greatest cost is payroll for Emily and I, which will be
