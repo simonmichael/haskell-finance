@@ -10,7 +10,7 @@ README.md: hf.journal Makefile
 	$(HLEDGER) bs -QE -e tomorrow -O html >>.$@
 	echo >>.$@
 	$(DELCSS) <.$@ >$@
-	git commit -m "reports" -- $@
+	git commit -m "reports" -- $@ || echo "reports have not changed"
 
 # plain text
 # README.md: hf.journal Makefile
