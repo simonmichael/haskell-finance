@@ -29,7 +29,7 @@ commodity $1,000.
     revenues:sponsors:EMQ                       $-25,000
     assets:general                              $257,000
     revenues:sponsors:GitHub                    $-70,000
-    assets:GHC                                   $70,000
+    assets:ghc                                   $70,000
 
 2021-02-22 Andrew and Emily start, total assets are $327k
     assets                                        $0 ==* $327,000
@@ -71,7 +71,7 @@ commodity $1,000.
 
 2021-06-01 GHC support, approximate date
     expenses:projects:GHC                        $12,000
-    assets:GHC                                  $-12,000
+    assets:ghc                                  $-12,000
 
 ; We’ve contributed $1,000 to HLS’s Summer of Code project, and spent
 ; around $1,000 on various expenses involved with being in business.
@@ -120,6 +120,6 @@ commodity $1,000.
 ;     expenses:marketing                           $20,000
 ;     expenses:misc                                $15,000
 ;     assets:reserve                              $100,000 == $100,000
-;     assets:GHC                                   $50,000 == $108,000
+;     assets:ghc                                   $50,000 == $108,000
 ;     assets:general                              $140,000 == $181,000
 
