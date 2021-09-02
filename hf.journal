@@ -49,12 +49,21 @@ commodity $1,000.
     assets:general                              $115,000
 
 ; We have 13 individual contributors, of which 11 are recurring monthly!
-; Most are in the $5 - $10 / month range, we have one at $20, another at $50 (!!), and cdsmith’s amazing contributions which, annualized, gets him to the Applicative sponsorship level!
+; Most are in the $5 - $10 / month range, we have one at $20, another at $50 (!!), and 
+; cdsmith’s amazing contributions which, annualized, gets him to the Applicative sponsorship level!
 ; Of the one time donations, one was for $20, and the other for $1,000 - absolutely wonderful.
 
-2021-06-01 Individual donations, unknown dates/amounts
-    revenues:sponsors:individuals?               $-0
-    assets:general                                $0
+2021-06-01 Individual donations (guess)
+    revenues:sponsors:individuals (guess)        $-2,300  ; date:3/1
+    revenues:sponsors:individuals (guess)        $-2,300  ; date:4/1
+    revenues:sponsors:individuals (guess)        $-2,300  ; date:5/1
+    revenues:sponsors:individuals (guess)        $-2,300  ; date:6/1
+    revenues:sponsors:individuals (guess)        $-2,300  ; date:7/1
+    revenues:sponsors:individuals (guess)        $-2,300  ; date:8/1
+    revenues:sponsors:individuals (guess)        $-2,300  ; date:9/1
+    revenues:sponsors:individuals (guess)           $-20
+    revenues:sponsors:individuals (guess)        $-1,000
+    assets:general                               $17,120
 
 ; By far our greatest cost is payroll for Emily and I, which will be
 ; (with worker’s comp, payroll taxes, benefits, and everything) just
@@ -84,8 +93,8 @@ commodity $1,000.
     expenses:misc                                 $1,000
     assets:general                               $-1,000
 
-2021-09-01 current total assets are $128k
-    assets                                        $0 ==* $128,000
+2021-09-01 current total assets are ~$145k
+    assets                                        $0 ==* $145,120
 
 ; That leaves a bunch left over, and here’s our budget for the rest of
 ; the year: $6,000 for support of the Haskell Interlude podcast,
@@ -119,7 +128,7 @@ commodity $1,000.
 ;     expenses:projects:community                  $25,000
 ;     expenses:marketing                           $20,000
 ;     expenses:misc                                $15,000
-;     assets:reserve                              $100,000 == $100,000
-;     assets:ghc                                   $50,000 == $108,000
-;     assets:general                              $140,000 == $181,000
+;     assets:reserve                              $100,000
+;     assets:ghc                                   $50,000
+;     assets:general                              $140,000
 
