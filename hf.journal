@@ -69,10 +69,10 @@ commodity $1,000.
 ; (with worker’s comp, payroll taxes, benefits, and everything) just
 ; under $300,000 for this year.
 
-2021-06-01 Salaries etc. for 2021, approximate dates
-    expenses:salaries                           $100,000  ; date:2021-04-01
-    expenses:salaries                           $100,000  ; date:2021-07-01
-    expenses:salaries                           $100,000  ; date:2021-10-01
+2021-06-01 Staff salaries & employer contributions for 2021, approximate dates
+    expenses:payroll                            $100,000  ; date:2021-04-01
+    expenses:payroll                            $100,000  ; date:2021-07-01
+    expenses:payroll                            $100,000  ; date:2021-10-01
     assets:general                             $-300,000
 
 ; We also have the GHC support that GitHub earmarked its contribution
